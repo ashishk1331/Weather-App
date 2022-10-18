@@ -1,0 +1,127 @@
+:root{
+	--primary: #3D3D3D;
+	--secondary: #06D6A0;
+	--foreground: #fff;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: 'IBM Plex Mono', monospace;
+}
+html, body , #app{
+	width: 100%;
+	height: 100%;
+	background-color: var(--primary);
+	color: var(--foreground);
+}
+#app{
+	width: 94%;
+	max-width: 480px;
+	overflow: hidden;
+	padding: 2em;
+}
+svg{
+	width: 1.2em;
+	height: 1.2em;
+}
+a, a:active, a:focus{
+	color: var(--secondary);
+	text-decoration: none;
+}
+
+/*utilities*/
+.flex-center{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	text-align: center;
+}
+.m-auto{
+	margin: auto;
+}
+.mr-auto{
+	margin-right: auto;
+}
+.highlight{
+	color: var(--secondary);
+}
+
+/*bem classes*/
+footer{
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+	position: fixed;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	padding-bottom: 1em;
+}
+footer > svg{
+	width: 1em;
+	height: 1em;
+	margin-top: 0.5em;
+	margin-right: 0.4em;
+	fill: var(--secondary);
+}
+.message{
+	text-align: left;
+	margin-bottom: 2em;
+}
+.message > svg{
+	width: 8em;
+	height: 8em;
+	fill: var(--secondary);
+	margin-bottom: 1.4em;
+}
+.message > p{
+	font-size: 3.2em;
+    line-height: 0.6em;
+}
+.loader{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	fill: var(--secondary);
+	width: 2em;
+	height: 2em;
+	animation: rotation 800ms linear 0s infinite;
+}
+@keyframes rotation{
+	from{
+		transform: rotate(0deg);
+	} to {
+		transform: rotate(360deg);
+	}
+}
+.temp{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.temp__value{
+	font-size: 6em;
+}
+.temp__info{
+	display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.temp__info > svg{
+	fill: white;
+	width: 2em;
+	height: 2em;
+}
+.temp__info > p{
+	font-size: 3em;
+}
+.userPlace{
+	text-align: right;
+}
+.userPlace > p{
+	font-size: 2em;
+	text-transform: uppercase;
+}
